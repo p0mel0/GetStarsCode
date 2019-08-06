@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 import time
 
 
-# 从搜索结果爬取各项目主页url,写入文件
+# 从用户stars页面爬取各项目主页url,写入文件
 def getProject(urls):
     for url in urls:
         response = requests.get(url, headers=headers)
