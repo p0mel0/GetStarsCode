@@ -7,7 +7,7 @@ from threading import Thread
 class Code_spider(object):
     def __init__(self):
         self.urls_file = 'ProjectUrl_stars.txt'  # 存放项目链接的文件
-        self.folder = 'F:/PyProject/GetCode_MyStar/projects(stars)/'  # 项目存放目录
+        self.folder = 'F:/PyProject/GetCode_MyStar/projects(stars)/'  # 项目存放目录（需修改）
         self.headers = {'User-Agent': 'Mozilla/5.0'}
         self.urlCount = 0
         self.q1 = Queue()  # 创建消息队列，存放项目主页的链接
@@ -104,4 +104,4 @@ if __name__ == '__main__':
     spider.work('down_load')
 
     end_time = time.time()
-    print("爬取总时间:", end_time - start_time)
+    print("下载总时间:", end_time - start_time)
