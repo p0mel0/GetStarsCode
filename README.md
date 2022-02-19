@@ -1,5 +1,21 @@
 # GetStarsCode
-批量下载github用户已star项目的源码
 
-1. getUrl.py：爬取用户star项目的链接，将项目链接存本地ProjectUrl_stars.txt
-2. mtp_getProject.py：请求ProjectUrl_stars.txt中的项目链接，爬取项目源码下载链接，多线程下载
+批量下载github用户star项目的源码
+
+## 使用说明
+
+```shell
+usage: python GetStarsCode.py -u <username> [-p <proxy_url>] [-o <output_dir>] [-n <maximum_projects>]
+    -u : github用户名
+    -p : 代理地址
+    -o : 下载到本地的目标目录
+    -n : 项目的最大下载数量
+Example: python GetStarsCode.py -u "p0mel0" -p "http://127.0.0.1:7890" -o "G:\temp\starProject" -n 3
+```
+
+* GetStarsCode.py：爬取用户star项目的所有分页链接，并将star项目的url存本地Url_starProjects.txt
+* DownloadByUrls.py：请求ProjectUrl_stars.txt中的项目链接，爬取项目源码下载链接并下载
+
+## 效果图
+
+![img.png](img.png)
