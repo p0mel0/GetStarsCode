@@ -92,7 +92,7 @@ if __name__ == '__main__':
         elif opt == "-n":
             limit_num = arg
 
-    firstUrl = 'https://github.com/' + username + '?tab=stars'  # 可根据参数过来stars项目，如stars数降序显示：
+    firstUrl = 'https://github.com/' + username + '?tab=stars'  # 可根据修改参数来排序star的项目，例如项目按stars数量降序：&direction=desc&sort=stars&tab=stars
     fp = open('Url_starProjects.txt', 'w+')
     headers = {'User-Agent': 'Mozilla/5.0', 'Referer': 'https://github.com/'}
     proxies = {'http': proxy, 'https': proxy}
@@ -100,15 +100,15 @@ if __name__ == '__main__':
     # 存放star项目分页链接
     starredPageUrls = [firstUrl]
     print("------------------------------------------")
-    print("开始爬取star分页链接")
+    print("开始爬取star分页链接...")
     print("------------------------------------------")
     getStarredPages(url=firstUrl)
 
     print("------------------------------------------")
-    print("开始爬取star项目主页的url 并写入Url_starProjects.txt")
+    print("开始爬取star项目主页的url 并写入Url_starProjects.txt ...")
     print("------------------------------------------")
     getStarredProjects(urls=starredPageUrls, maxLines=int(limit_num))
-    print("所有url已写入完成")
+    print("所有star项目url已写入完成")
     fp.close()
 
     print("------------------------------------------")
