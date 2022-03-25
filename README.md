@@ -1,11 +1,11 @@
 # GetStarsCode
 
-批量下载github用户stars项目的源码
+个人学习爬虫写的小项目，主要功能是批量下载github用户stars项目的源码
 
 ## 使用说明
 
 ```shell
-usage: python GetStarsCode.py -u <username> [-p <proxy_url>] [-o <output_dir>] [-n <maximum_projects>]
+usage: python GetStarsCode.py -u <username> [-p proxy_url] [-o <output_dir>] [-n <maximum_projects>]
     -u : github用户名
     -p : 代理地址
     -o : 下载到本地的目标目录
